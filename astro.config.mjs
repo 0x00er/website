@@ -4,6 +4,7 @@ import react from "@astrojs/react";
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypePresetMinify from 'rehype-preset-minify';
 import markdoc from "@astrojs/markdoc";
+import vercel from "@astrojs/vercel/serverless";
 const rehypeExternalLinksConfig = [rehypeExternalLinks, {
   target: '_blank',
   rel: ['noopener', 'noreferrer']
@@ -23,6 +24,7 @@ export default defineConfig({
     }
   },
   site: 'https://0x00er.github.io',
-  output: "static",
+  output: "server",
+  adapter: vercel()
 
 });
