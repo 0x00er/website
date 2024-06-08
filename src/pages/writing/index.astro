@@ -1,0 +1,58 @@
+---
+import '../../styles/global.css'
+import '../../styles/writing-index.css'
+
+import { getCollection } from 'astro:content'
+import SEO from '../../components/SEO.astro'
+
+
+const posts = await getCollection('writing', post => import.meta.env.DEV || !post.data.draft)
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date))
+---
+
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<link rel='preconnect' href='https://fonts.googleapis.com' />
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+	<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&family=Red+Hat+Display:wght@900&display=swap' rel='stylesheet' />
+
+	<SEO title='My Writing' description={`I hesitate to label it as a blog, mainly because there's no set schedule for updates. Occasionally, I compile my thoughts into digital zines, weaving together fragments of code, tales of astronomy and hacking adventures. Take a peek; you might just find something that tickles your fancy.`} />
+</head>
+<body>
+	<main>
+		<section>
+			<h1>~/writings</h1>
+
+			<p>
+				I hesitate to label it as a blog, due to no expectation of frequency, but sometimes, I compile my thoughts into digital zines, philosophy, fragments of code, tales of astronomy and hacking adventures.
+				Dive in; you might discover some enjoyment.
+				<br />
+				&ndash; Sagar
+			</p>
+			
+
+			
+
+			<p><a href='/'>Back to homepage</a></p>
+		</section>
+
+		<section class='posts' role='list'>
+			{posts.map(post => (
+				<article role='listitem'>
+					<a href={`/writing/${post.slug}`}>
+						<h2>
+							{post.data.draft ? '[DRAFT]' : ''}
+							{post.data.title}
+						</h3>
+						<p>{post.data.abstract}</p>
+						<p class='date'>{post.data.date}</p>
+					</a>
+				</article>
+			))}
+		</section>
+	</main>
+</body>
+</html>

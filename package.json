@@ -1,0 +1,39 @@
+{
+  "name": "celestial-crater",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/react": "^3.5.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "postcss-nesting": "^11.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rehype-external-links": "^2.1.0",
+    "rehype-preset-minify": "^6.0.0"
+  },
+  "dependencies": {
+    "@astrojs/markdoc": "^0.11.0",
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/react": "^3.5.0",
+    "@astrojs/ts-plugin": "^1.8.0",
+    "@astrojs/vercel": "^7.6.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro-icon": "^0.8.2",
+    "postcss-nesting": "^11.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rehype-external-links": "^2.1.0",
+    "rehype-preset-minify": "^6.0.0",
+    "shiki": "^0.14.2"
+  }
+}

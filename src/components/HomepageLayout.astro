@@ -1,0 +1,40 @@
+---
+import '../styles/global.css'
+import '../styles/homepage.css'
+import SEO from '../components/SEO.astro'
+---
+
+<html lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<link rel='preconnect' href='https://fonts.googleapis.com' />
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+	<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap' rel='stylesheet' />
+
+	<SEO description='Hello, I&rsquo;m 0x00er! I do lots of things, but I&rsquo;m usually working with computers, space, and cybersecurity. I&rsquo;m currently deep in the code, juggling too many projects.' />
+</head>
+<body>
+	<main>
+		<div class='banner' aria-hidden='true'>
+			<video width='433' height='173' autoplay loop muted playsinline>
+				<source src='/banner.webm' type='video/webm' />
+				<source src='/banner.mp4' type='video/mp4' />
+			</video>
+		</div>
+
+		<slot />
+	</main>
+
+	<script lang='javascript'>
+		
+		const oxzer = new Audio('/oxzer.mp3')
+		document.getElementById('ipa').addEventListener('click', () => {
+			oxzer.currentTime = 0
+			oxzer.play()
+		})
+	</script>
+
+</body>
+</html>
