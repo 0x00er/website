@@ -24,6 +24,6 @@ export default defineConfig({
     }
   },
   site: 'https://0x00er.github.io',
-  output: "server",
+  output: "static",
   adapter: vercel()
 });
