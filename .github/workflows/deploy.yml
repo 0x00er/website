@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages  # Use the expected name "github-pages"
-          path: ./dist  # Upload the .astro directory
+          path: dist  # Upload the .astro directory
           
   deploy:
     needs: build
