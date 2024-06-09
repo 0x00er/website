@@ -1,8 +1,8 @@
 main {
-	font-family: 'IBM Plex Serif', serif;
+	font-family: 'JetBrainsMonoNL Nerd Font Mono';
 	font-size: 1.1rem;
-	text-align: center;
-	padding: 100px 10px;
+	text-align: left;
+	padding: 120px 20px;
 }
 
 h1 {
