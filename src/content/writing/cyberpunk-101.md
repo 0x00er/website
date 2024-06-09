@@ -6,14 +6,6 @@ draft: false
 slug: cyberpunk-101
 ---
 
-
-
-# [Cyberpunk 101](https://github.com/0x00er/cyberpunk-101)
-
-**Cyberpunk for Dummies: Because the Future is Confusing**
-
-# Awesome Cyberpunk: Resources for the Neon Shadowrunner
-
 **Welcome to your one-stop shop for all things cyberpunk!** Whether you're a seasoned netwalker or a curious newbie, this curated list provides a deep dive into the genre's core themes, technology, and communities.
 
 Forget the drek-infested dregs of the datastream, chummer! Dive into the neon labyrinth of cyberpunk with this curated stash of resources. Whether you're a seasoned netrunner or a curious noob just waking up to the megacorporate matrix, this guide will boost your signal and get you wired into the heart of the genre.
