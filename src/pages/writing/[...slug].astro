@@ -44,13 +44,11 @@ const tabSize = post.data['tab-size'] || 4
 			<div id='__top__' />
 			
 			<h1>
-				{post.data.title === 'Putting the "You" in CPU'
-					? <>					</>
-					: post.data.title}
+				{ post.data.title}
 			</h1>
 				
 			<div class='meta'>
-				By Sagar Kumar
+				By 0x00er
 				&middot;
 				{post.data.date}
 				{post.data.draft && <>&middot; Draft</>}
