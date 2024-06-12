@@ -15,7 +15,10 @@ const rehypeExternalLinksConfig = [rehypeExternalLinks, {
 export default defineConfig({
   integrations: [mdx({
     rehypePlugins: [rehypeExternalLinksConfig, rehypePresetMinify]
-  }), react(), markdoc()],
+  }), react(), markdoc(),sitemap({
+    filter: (page) => !page.includes('--delist')
+     })
+     ],
   markdown: {
     smartypants: true,
     rehypePlugins: [rehypeExternalLinksConfig],
