@@ -24,7 +24,7 @@ export default defineConfig({
       theme: 'one-dark-pro'
     }
   },
-  site: 'https://0x00er.github.io',
+  site: 'https://0x00er.me',
   output: "server",
   adapter: vercel()
 
