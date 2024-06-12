@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from "@astrojs/mdx";
+import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
 import rehypeExternalLinks from 'rehype-external-links';
 import rehypePresetMinify from 'rehype-preset-minify';
@@ -15,10 +16,7 @@ const rehypeExternalLinksConfig = [rehypeExternalLinks, {
 export default defineConfig({
   integrations: [mdx({
     rehypePlugins: [rehypeExternalLinksConfig, rehypePresetMinify]
-  }), react(), markdoc(),sitemap({
-    filter: (page) => !page.includes('--delist')
-     })
-     ],
+  }), react(), markdoc(),sitemap()],
   markdown: {
     smartypants: true,
     rehypePlugins: [rehypeExternalLinksConfig],
