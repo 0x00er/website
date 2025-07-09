@@ -121,3 +121,17 @@ hr {
 		min-width: 0;
 	}
 }
+
+.redacted {
+  background: #e5e5e5;
+  color: transparent;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+  font-family: monospace;
+}
+.inline-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
