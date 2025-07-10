@@ -1,5 +1,5 @@
 main {
-	font-family: 'Sorts Mill Goudy', serif;
+	font-family: 'JetBrains Mono', monospace;
 	font-size: 1.1rem;
 	margin: 0 auto;
 	padding: 80px 20px;
@@ -8,7 +8,7 @@ main {
 }
 
 h1 {
-	font-family: 'Red Hat Display', sans-serif;
+	font-family: 'Space Grotesk', sans-serif;
 	font-weight: 900;
 	font-size: 2.5rem;
 	margin: 0;
