@@ -15,7 +15,7 @@ interface Props {
 
 const { title, description, banner, article } = Astro.props
 const {
-	url: bannerUrl = 'https://0x00er.me/cyberpunk.gif',
+	url: bannerUrl = 'https://0x00er.vercel.app/cyberpunk.gif',
 	alt: bannerAlt = 'An animated GIF of Maj. Motoko Kusanagi, an anime character, in a classic fight of water town.',
 	width: bannerWidth = 433,
 	height: bannerHeight = 173
@@ -78,7 +78,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 				{
 					'@type': 'Person',
 					'name': '0x00er',
-					'url': 'https://0x00er.me/'
+					'url': 'https://0x00er.vercel.app/'
 				}
 			]
 		})}
