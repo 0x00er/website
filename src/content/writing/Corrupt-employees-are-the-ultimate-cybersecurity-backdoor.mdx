@@ -14,7 +14,7 @@ Understanding and mitigating this risk is paramount for any enterprise handling 
 - Learn technical controls for monitoring user activity and enforcing the principle of least privilege.
 - Implement security measures to detect and prevent unauthorized data access and privilege escalation.
 
-## Monitoring User Activity with Windows Audit Policies
+### Monitoring User Activity with Windows Audit Policies
 Unauthorized account reactivation is a privileged action. Monitoring for such events is the first step in detection.
 
 Windows Command: Enable Audit Account Management
@@ -26,7 +26,7 @@ Windows Command: Check Event Logs for Account Changes (PowerShell)
 Get-EventLog -LogName Security -InstanceId 4720, 4722, 4738 -Newest 10
 ```
 
-### Step-by-step guide :
+## Step-by-step guide :
 
 
 #### 1) Open an elevated Command Prompt.
