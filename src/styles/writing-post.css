@@ -308,3 +308,32 @@ pre code {
 		}
 	}
 }
+
+/* ---------- ADDED SPACING FIXES ---------- */
+
+main p {
+  margin: 0.5rem 0; /* tighten paragraph spacing */
+  line-height: 1.5;
+}
+
+main ul,
+main ol {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+
+main li {
+  margin: 0.25rem 0;
+}
+
+main pre {
+  margin: 0.75rem 0;
+  line-height: 1.4;
+}
+
+main h2,
+main h3,
+main h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
