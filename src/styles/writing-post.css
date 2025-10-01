@@ -339,9 +339,10 @@ main h4 {
 }
 
 .gradient-footer {
-  width: 100vw; /* full viewport width */
-  height: 50vh; /* adjust as needed */
-  margin-left: calc(-50vw + 50%); /* escape the centered container */
+  position: relative;
+  width: 100vw; /* full screen */
+  height: 50vh;
+  margin-left: calc(-50vw + 50%);
   background: linear-gradient(
     to bottom,
     #322F2E 0%,
@@ -351,5 +352,20 @@ main h4 {
     #231D45 85%,
     #090712 100%
   );
+  overflow: hidden;
 }
 
+/* Fade at the top */
+.gradient-footer::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* extend upward to overlap */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 1) 0%, /* match your page bg */
+    rgba(18, 18, 18, 0) 100%
+  );
+}
