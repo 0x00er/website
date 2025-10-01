@@ -338,10 +338,10 @@ main h4 {
   margin-bottom: 0.75rem;
 }
 
-/* -------- Gradient footer -------- */
 .gradient-footer {
-  width: 100%;
-  height: 50vh; /* use 400px if you want a fixed height */
+  width: 100vw; /* full viewport width */
+  height: 50vh; /* adjust as needed */
+  margin-left: calc(-50vw + 50%); /* escape the centered container */
   background: linear-gradient(
     to bottom,
     #322F2E 0%,
@@ -352,3 +352,4 @@ main h4 {
     #090712 100%
   );
 }
+
