@@ -337,3 +337,18 @@ main h4 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
+
+/* -------- Gradient footer -------- */
+.gradient-footer {
+  width: 100%;
+  height: 50vh; /* use 400px if you want a fixed height */
+  background: linear-gradient(
+    to bottom,
+    #322F2E 0%,
+    #A57379 25%,
+    #A26A8D 45%,
+    #61447E 65%,
+    #231D45 85%,
+    #090712 100%
+  );
+}
