@@ -339,10 +339,8 @@ main h4 {
 }
 
 .gradient-footer {
-  position: relative;
-  width: 100%; /* full screen */
-  height: 100vh;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  height: 500px; /* adjust as needed */
   background: linear-gradient(
     to bottom,
     #322F2E 0%,
