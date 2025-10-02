@@ -338,32 +338,41 @@ main h4 {
   margin-bottom: 0.75rem;
 }
 
---transition-bg: linear-gradient(180deg, #e6e2e0, #cd8b94, #8a588a, #3a3072, #000000);
-.transition {
-    height: 200vh;
-    background: var(--transition-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .gradient-footer {
   width: 100vw;
-  height: 40vh; /* adjust height */
+  height: 40vh; /* adjust as you like */
   margin-left: calc(-50vw + 50%);
   background: var(--transition-bg);
   position: relative;
+  overflow: hidden;
 }
 
 /* Fade at the top */
-.gradient-footer::before {
+.gradient-footer::before,
+.gradient-footer::after {
   content: "";
   position: absolute;
-  top: -60px;
   left: 0;
   width: 100%;
   height: 120px;
+  pointer-events: none;
+}
+
+/* Top fade */
+.gradient-footer::before {
+  top: 0;
   background: linear-gradient(
     to bottom,
+    var(--color-bg) 0%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+/* Bottom fade */
+.gradient-footer::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
     var(--color-bg) 0%,
     rgba(0,0,0,0) 100%
   );
