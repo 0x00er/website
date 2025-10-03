@@ -1,5 +1,5 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Red+Hat+Display:wght@700;900&display=swap');
+/* Import Cyberpunk Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto+Mono:wght@400;500&display=swap');
 
 html, body {
     height: 100%;
@@ -18,8 +18,8 @@ body {
 }
 
 main {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    font-size: 1.05rem;
     line-height: 1.65;
     margin: 0 auto;
     padding: 80px 20px;
@@ -40,7 +40,7 @@ main {
 .toc a, a.undecorated { color: inherit; }
 .toc a:hover, .toc a:visited, a.undecorated:hover, a.undecorated:visited { color: inherit; background: inherit; }
 .toc a::before, .toc a::after, a.undecorated::before, a.undecorated::after { content: none; display: none; }
-.toc { font-family: 'Inter', sans-serif; background: #f1f3f5cc; overflow: auto; line-height: 1.4; scroll-behavior: smooth; box-sizing: border-box; width: 0; padding: 0; transform: translateX(var(--toc-width)); transition-property: transform, width, padding; transition-timing-function: ease-out; transition-duration: 300ms, 0ms, 0ms; transition-delay: 0ms, 300ms, 300ms; height: 100%; }
+.toc { font-family: 'Roboto Mono', monospace, sans-serif; background: #f1f3f5cc; overflow: auto; line-height: 1.4; scroll-behavior: smooth; box-sizing: border-box; width: 0; padding: 0; transform: translateX(var(--toc-width)); transition-property: transform, width, padding; transition-timing-function: ease-out; transition-duration: 300ms, 0ms, 0ms; transition-delay: 0ms, 300ms, 300ms; height: 100%; }
 .toc h2 { margin: 0; margin-left: 4px; margin-bottom: 14px; font-size: 1.3em; text-align: center; color: #868e96; font-weight: normal; }
 .toc ul { margin: 0; list-style-type: none; font-weight: normal; }
 .toc ul li { margin: 6px 0; }
@@ -60,13 +60,20 @@ main {
 .toc-activated .toc-toggle .icon-collapse { display: block; }
 .toc-activated .toc-toggle .icon-activate { display: none; }
 
-h1 { font-family: 'Red Hat Display', sans-serif; font-weight: 900; font-size: 2.2rem; margin: 0; margin-bottom: 12px; text-align: center; }
-.meta { font-weight: normal; text-align: center; margin-bottom: 50px; }
-h2 { margin: 0; margin-top: 80px; font-family: 'Inter', sans-serif; font-weight: 600; }
-h3 { margin-top: 60px; font-family: 'Inter', sans-serif; font-weight: 600; }
-h4 { margin-top: 40px; font-family: 'Inter', sans-serif; font-weight: 600; }
+/* Headings in Orbitron with fallbacks */
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Orbitron', 'Roboto Mono', monospace, sans-serif; 
+    font-weight: 700; 
+    letter-spacing: 1px;
+}
 
-code { font-size: 0.9em; font-family: 'IBM Plex Mono', monospace, sans-serif; }
+h1 { font-weight: 800; font-size: 2.2rem; margin: 0; margin-bottom: 12px; text-align: center; }
+.meta { font-weight: normal; text-align: center; margin-bottom: 50px; }
+h2 { margin: 0; margin-top: 80px; }
+h3 { margin-top: 60px; }
+h4 { margin-top: 40px; }
+
+code { font-size: 0.9em; font-family: 'Roboto Mono', monospace, sans-serif; }
 code:not(pre code) { color: #8f310c; background: #fff4e6; padding: 1px 2px; border-radius: 2px; }
 pre code { font-size: 0.85em; }
 
