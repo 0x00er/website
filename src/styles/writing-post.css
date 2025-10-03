@@ -1,5 +1,4 @@
-/* Import Cyberpunk Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto+Mono:wght@400;500&family=Fira+Code:wght@400;600&display=swap');
 
 html, body {
     height: 100%;
@@ -60,7 +59,7 @@ main {
 .toc-activated .toc-toggle .icon-collapse { display: block; }
 .toc-activated .toc-toggle .icon-activate { display: none; }
 
-/* Headings in Orbitron with fallbacks */
+
 h1, h2, h3, h4, h5, h6 { 
     font-family: 'Orbitron', 'Roboto Mono', monospace, sans-serif; 
     font-weight: 700; 
@@ -73,7 +72,7 @@ h2 { margin: 0; margin-top: 80px; }
 h3 { margin-top: 60px; }
 h4 { margin-top: 40px; }
 
-code { font-size: 0.9em; font-family: 'Roboto Mono', monospace, sans-serif; }
+code { font-size: 0.9em; font-family: 'Fira Code', monospace, sans-serif; }
 code:not(pre code) { color: #8f310c; background: #fff4e6; padding: 1px 2px; border-radius: 2px; }
 pre code { font-size: 0.85em; }
 
