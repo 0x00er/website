@@ -28,14 +28,14 @@ article a {
 	padding: 20px;
 	gap: 10px;
 	font-size: 1rem;
-	border: 3px solid #dee2e6;
+	border: 3px solid #ffffff;
 
 	&, &:not([href^=\#]):visited {
 		color: inherit;
 
 		&:hover {
-			background: #dee2e6;
-			color: inherit;
+			background: #ffffff;
+			color: #000000;
 		}
 	}
 
@@ -51,15 +51,8 @@ article a {
 	}
 
 	& .date {
-		color: #868e96;
+		color: #6b971a;
 	}
 }
 
-#newsletter {
-	margin: 24px 0;
 
-	& p {
-		margin: 0;
-		margin-bottom: 4px;
-	}
-}

@@ -4,8 +4,6 @@ main {
 	padding: 20px;
 	padding-top: 0;
 	max-width: 800px;
-	position: relative;
-  	z-index: 1;
 }
 
 h2 {
@@ -14,14 +12,15 @@ h2 {
 }
 
 .banner {
-  position: absolute;
-  width: min(900px, 100%);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  margin-top: -50px;
-  pointer-events: none;
-  z-index: 0; 
+	position: absolute;
+	width: min(900px, 100%);
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	pointer-events: none;
+	margin-top: -50px;
+	z-index: -1;
 
 	& video {
 		image-rendering: pixelated;
@@ -52,11 +51,6 @@ h2 {
 	display: grid;
 	gap: 14px;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.banner video {
-  opacity: 0.35;
-  mix-blend-mode: screen; /* optional cool effect */
 }
 
 #ipa {
