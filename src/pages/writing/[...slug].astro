@@ -3,7 +3,6 @@ import '../../styles/global.css'
 import '../../styles/writing-post.css'
 import type { CollectionEntry } from 'astro:content'
 import { getEntryBySlug } from 'astro:content'
-import { Icon } from 'astro-icon'
 import SEO from '../../components/SEO.astro'
 import TOCList from '../../components/TOCList.astro'
 
@@ -59,9 +58,9 @@ const tabSize = post.data['tab-size'] || 4
  
     <div class='toc-container'>
         <button class='toc-toggle' aria-hidden='true'>
-            <Icon name='ion:list-sharp' class='icon-activate' />
-            <Icon name='ion:chevron-right' class='icon-collapse' />
-            <Icon name='ion:close-sharp' class='icon-x' />
+            <span class="icon icon-activate">≡</span>
+            <span class="icon icon-collapse">›</span>
+            <span class="icon icon-x">×</span>   
         </button>
 
         <nav class='toc' aria-hidden='true'>
