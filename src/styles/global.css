@@ -100,3 +100,9 @@ hr {
   align-items: center;
   gap: 0.25rem;
 }
+
+.bio span {
+  display: block;      /* keep each span on its own line */
+  margin: 0;           /* remove margin */
+  line-height: 1;      /* remove extra vertical space */
+}
