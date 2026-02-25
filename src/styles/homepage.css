@@ -1,26 +1,11 @@
-/* General Layout */
-main {
-    font-family: 'IBM Plex Mono', monospace, sans-serif;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 800px;
-    color: #fff; /* Assuming dark theme based on image */
-    background-color: #1a1a1a; 
-}
-
-/* Banner Container: Keeps the image and logo together */
-.banner-container {
-    position: relative;
+/* Container for the image and the text overlay */
+.banner {
+    position: relative; /* This is the anchor for the absolute text */
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    background: #000;
     overflow: hidden;
-}
-
-.banner {
-    position: relative;
-    line-height: 0; /* Removes weird gaps at bottom of images/videos */
+    line-height: 0; /* Prevents tiny gaps at the bottom */
 }
 
 .banner video {
@@ -28,29 +13,32 @@ main {
     height: auto;
     image-rendering: pixelated;
     user-select: none;
-    opacity: 0.4; /* Slightly higher for visibility */
-    display: block;
+    opacity: 0.3; /* Matches the vibe of your reference image */
 }
 
-/* The 0x00er Logo: Positioned OVER the banner */
+/* This puts the logo ON the banner */
 .logo-text {
     position: absolute;
-    bottom: 20px; /* Adjust this to move it up/down on the GIF */
-    left: 20px;   /* Adjust this to move it left/right */
+    bottom: 10px;    /* Pinned to the bottom of the banner */
+    left: 20px;      /* Pinned to the left side */
     margin: 0;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    color: #ffffff;
-    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8); /* Makes it pop against the GIF */
+    color: white;
     z-index: 10;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-/* Content below the banner */
-h2 {
-    margin: 0;
-    margin-top: 40px;
+/* Main content starts naturally after the banner */
+main {
+    font-family: 'IBM Plex Mono', monospace, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
+/* Your existing link and grid styles */
 .quick-links ul {
     padding: 0;
     margin-top: 10px;
@@ -58,10 +46,18 @@ h2 {
     list-style-type: none;
 }
 
-.quick-links li { padding: 4px 0; }
-.quick-links a { 
-    display: inline-block; 
-    color: #bb86fc; 
+.grid-twos {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 2.5rem;
+        left: 15px;
+    }
+}
     text-decoration: none;
 }
 
