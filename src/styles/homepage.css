@@ -1,59 +1,87 @@
+/* General Layout */
 main {
-	font-family: 'IBM Plex Mono', monospace, sans-serif;
-	margin: 0 auto;
-	padding: 20px;
-	padding-top: 0;
-	max-width: 800px;
+    font-family: 'IBM Plex Mono', monospace, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    color: #fff; /* Assuming dark theme based on image */
+    background-color: #1a1a1a; 
 }
 
-h2 {
-	margin: 0;
-	margin-top: 60px;
+/* Banner Container: Keeps the image and logo together */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    overflow: hidden;
 }
 
 .banner {
-	position: absolute;
-	width: min(900px, 100%);
-	overflow: hidden;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	pointer-events: none;
-	margin-top: -50px;
-	z-index: -1;
-
-	& video {
-		image-rendering: pixelated;
-		user-select: none;
-		opacity: 0.2;
-		z-index: -1;
-	}
+    position: relative;
+    line-height: 0; /* Removes weird gaps at bottom of images/videos */
 }
 
-@media (max-width: 900px) {
-	.banner {
-		margin-top: 0;
-		top: 0;
-	}
+.banner video {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+    user-select: none;
+    opacity: 0.4; /* Slightly higher for visibility */
+    display: block;
+}
+
+/* The 0x00er Logo: Positioned OVER the banner */
+.logo-text {
+    position: absolute;
+    bottom: 20px; /* Adjust this to move it up/down on the GIF */
+    left: 20px;   /* Adjust this to move it left/right */
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8); /* Makes it pop against the GIF */
+    z-index: 10;
+}
+
+/* Content below the banner */
+h2 {
+    margin: 0;
+    margin-top: 40px;
 }
 
 .quick-links ul {
-	padding: 0;
-	margin-top: -20px;
-	margin-left: 4ch;
-	list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 4ch;
+    list-style-type: none;
+}
 
-	& li { padding: 2px 0; }
-	& a { display: inline-block; }
+.quick-links li { padding: 4px 0; }
+.quick-links a { 
+    display: inline-block; 
+    color: #bb86fc; 
+    text-decoration: none;
 }
 
 .grid-twos {
-	display: grid;
-	gap: 14px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 20px;
 }
 
 #ipa {
-	cursor: pointer;
-	color: #d9480f;
+    cursor: pointer;
+    color: #d9480f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .logo-text {
+        font-size: 2.5rem;
+        bottom: 10px;
+        left: 10px;
+    }
 }
