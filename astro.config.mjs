@@ -8,6 +8,8 @@ import vercel from '@astrojs/vercel'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypePresetMinify from 'rehype-preset-minify'
 
+
+
 const rehypeExternalLinksConfig = [
   rehypeExternalLinks,
   {
