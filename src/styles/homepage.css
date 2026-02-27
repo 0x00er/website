@@ -23,7 +23,7 @@ h2 {
   & video {
     image-rendering: pixelated;
     user-select: none;
-    opacity: 0.3;
+    opacity: 0.4;
   }
 }
 
