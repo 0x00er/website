@@ -37,7 +37,7 @@ export default defineConfig({
     }
   },
 
-  site: 'https://0x00er.vercel.app',
+  site: 'https://0x00er.in',
   output: 'server',
   adapter: vercel()
 })
